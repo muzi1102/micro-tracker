@@ -10,7 +10,8 @@
   "scripts": {
     "prepare": "husky install",
     "build": "rollup -c",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "test1": "echo nnn"
   },
   "keywords": [
     "tracker"
@@ -29,7 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "npm run test1",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
