@@ -37,7 +37,7 @@ export default [{
     ]
  
 }, {
-    //打包声明文件
+  //打包声明文件
     input: "./src/core/index.ts",
     output:{
         // 这里是什么意思呀！！我不明白

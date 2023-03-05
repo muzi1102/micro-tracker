@@ -8,8 +8,8 @@
   "typings": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "mocha --reporter spec"
   },
   "keywords": [
     "tracker"
@@ -21,12 +21,36 @@
   "bugs": {
     "url": "https://github.com/muzi1102/micro-tracker.git/issues"
   },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "author": "beautyLee",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^4.9.5"
+    "typescript": "*"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "mocha": "^10.2.0",
     "rollup": "^3.18.0",
     "rollup-plugin-dts": "^5.2.0",
     "rollup-plugin-typescript2": "^0.34.1"
