@@ -2,13 +2,25 @@
   "name": "tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"
   },
-  "keywords": [],
+  "keywords": [
+    "tracker"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muzi1102/micro-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/muzi1102/micro-tracker.git/issues"
+  },
   "author": "beautyLee",
   "license": "ISC",
   "dependencies": {
